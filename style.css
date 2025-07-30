@@ -98,6 +98,19 @@ body {
   line-height: 1.6;
 }
 
+.error-message {
+  color: #b00020;
+  background-color: #ffe6e6;
+  border: 1px solid #f5c2c2;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 600px;
+  font-weight: bold;
+  display: none;
+}
+
 #generate-btn {
   background-color: #4caf50;
   color: white;

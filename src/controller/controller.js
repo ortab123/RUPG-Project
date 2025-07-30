@@ -9,21 +9,30 @@ class Controller {
   }
 
   async generateUser() {
-    const users = await this.apiManager.getUsers();
-    const quote = await this.apiManager.getQuote();
-    const pokemon = await this.apiManager.getRandomPokemon();
-    const about = await this.apiManager.getAboutMe();
+    const errorDiv = document.getElementById("error-message");
+    errorDiv.style.display = "none";
 
-    const user = new User(users[0], users.slice(1), quote, pokemon, about);
-    this.renderer.render(user);
+    try {
+      const users = await this.apiManager.getUsers();
+      const quote = await this.apiManager.getQuote();
+      const pokemon = await this.apiManager.getRandomPokemon();
+      const about = await this.apiManager.getAboutMe();
 
-    document.getElementById("main-user").style.display = "block";
-    document.getElementById("friends").style.display = "block";
-    document.getElementById("quote").style.display = "block";
-    document.getElementById("pokemon").style.display = "block";
-    document.getElementById("about-me").style.display = "block";
+      const user = new User(users[0], users.slice(1), quote, pokemon, about);
+      this.renderer.render(user);
 
-    document.getElementById("welcome-screen")?.remove();
+      document.getElementById("main-user").style.display = "block";
+      document.getElementById("friends").style.display = "block";
+      document.getElementById("quote").style.display = "block";
+      document.getElementById("pokemon").style.display = "block";
+      document.getElementById("about-me").style.display = "block";
+
+      document.getElementById("welcome-screen")?.remove();
+      document.getElementById("generate-btn").style.display = "block";
+    } catch (err) {
+      errorDiv.textContent = err.message;
+      errorDiv.style.display = "block";
+    }
   }
 
   init() {
