@@ -1,8 +1,11 @@
 import APIManager from "../model/apiManager.js";
+import User from "../model/user.js";
+import Renderer from "../view/renderer.js";
 
 class Controller {
   constructor() {
     this.apiManager = new APIManager();
+    this.renderer = new Renderer();
   }
 
   async init() {
@@ -11,11 +14,9 @@ class Controller {
     const pokemon = await this.apiManager.getRandomPokemon();
     const about = await this.apiManager.getAboutMe();
 
-    console.log("Main User:", users[0]);
-    console.log("Friends:", users.slice(1));
-    console.log("Quote:", quote);
-    console.log("Pokemon:", pokemon);
-    console.log("About Me:", about);
+    const user = new User(users[0], users.slice(1), quote, pokemon, about);
+
+    this.renderer.render(user);
   }
 }
 
