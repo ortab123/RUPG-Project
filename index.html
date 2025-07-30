@@ -4,15 +4,21 @@
     <meta charset="UTF-8" />
     <title>RUPG</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <button id="generate-btn">Generate User</button>
     <div id="user-container">
-      <div id="main-user"></div>
-      <div id="friends"></div>
-      <div id="quote"></div>
-      <div id="pokemon"></div>
-      <div id="about-me"></div>
+      <div id="welcome-screen" class="section">
+        <h1>Welcome to our App!</h1>
+        <p>Click the button below to generate a random user profile.</p>
+        <button id="generate-btn">Generate User</button>
+      </div>
+
+      <div id="main-user" class="section user" style="display: none"></div>
+      <div id="friends" class="section friends" style="display: none"></div>
+      <div id="quote" class="section quote" style="display: none"></div>
+      <div id="pokemon" class="section pokemon" style="display: none"></div>
+      <div id="about-me" class="section about" style="display: none"></div>
     </div>
 
     <script type="module" src="main.js"></script>

@@ -25,13 +25,15 @@ class Renderer {
 
   _renderQuote(quote) {
     const quoteDiv = document.getElementById("quote");
-    quoteDiv.innerHTML = `<blockquote>"${quote}"<br><em>- Kanye West</em></blockquote>`;
+    quoteDiv.innerHTML = `
+    <h3>Favorite Quote:</h3>
+    <blockquote>"${quote}"<br><em>- Kanye West</em></blockquote>`;
   }
 
   _renderPokemon(pokemon) {
     const pokeDiv = document.getElementById("pokemon");
     pokeDiv.innerHTML = `
-      <h3>Pokemon: ${pokemon.name}</h3>
+      <h3>Favorite Pokemon: ${pokemon.name}</h3>
       <img src="${pokemon.image}" alt="${pokemon.name}" />
     `;
   }
