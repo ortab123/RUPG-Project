@@ -111,6 +111,51 @@ body {
   display: none;
 }
 
+#user-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#save-user-btn,
+#load-user-btn,
+#saved-users-dropdown {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px auto;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+#save-user-btn:hover,
+#load-user-btn:hover {
+  background-color: #45a049;
+}
+
+#saved-users-dropdown {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #bbb;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+#saved-users-dropdown:hover,
+#saved-users-dropdown:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
 #generate-btn {
   background-color: #4caf50;
   color: white;

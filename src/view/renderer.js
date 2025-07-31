@@ -1,5 +1,6 @@
 class Renderer {
   render(user) {
+    this.currentUser = user;
     this._renderMainUser(user);
     this._renderFriends(user.friends);
     this._renderQuote(user.quote);
@@ -33,7 +34,7 @@ class Renderer {
   _renderPokemon(pokemon) {
     const pokeDiv = document.getElementById("pokemon");
     pokeDiv.innerHTML = `
-      <h3>Favorite Pokemon: ${pokemon.name}</h3>
+      <h3>Favorite Pokemon: ${capitalize(pokemon.name)}</h3>
       <img src="${pokemon.image}" alt="${pokemon.name}" />
     `;
   }
@@ -45,6 +46,14 @@ class Renderer {
       <p>${text}</p>
     `;
   }
+
+  getCurrentUser() {
+    return this.currentUser;
+  }
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 export default Renderer;
