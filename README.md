@@ -62,14 +62,16 @@ Click "Generate User" to fetch and display a random profile.
 
 Use the "Save" and "Load" buttons to store and retrieve users from your browser's localStorage.
 
-✅ Extra Features Implemented
-1.Capitalize Pokémon name using a custom capitalize() function.
-2.Store multiple users in localStorage with unique keys.
-3.Load users from a dynamic dropdown menu.
-4.Full error handling and fallback UI for API failures.
-5.Neat1 and modular folder structure for scalability.
+## ✅ Extra Features Implemented
 
-📝 Notes
-1.This project runs fully on the client-side – no backend required.
-2.APIs used are all public and do not require authentication.
-3.You can easily add more APIs or extend the profile content.
+- Capitalize Pokémon name using a custom `capitalize()` function.
+- Store multiple users in `localStorage` with unique keys.
+- Load users from a dynamic dropdown menu.
+- Full error handling and fallback UI for API failures.
+- Neat and modular folder structure for scalability.
+
+## 📝 Notes
+
+- This project runs fully on the client-side – no backend required.
+- APIs used are all public and do not require authentication.
+- You can easily add more APIs or extend the profile content.
